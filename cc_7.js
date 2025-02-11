@@ -80,6 +80,19 @@ const filterHighValueTransactions = (transactions, amount) => transactions.filte
 console.log(filterHighValueTransactions(transactions, amount => amount > 1000)); // Expected output: [1200, 3000, 2200]
 // The log is where we decide what amount we want to filter by
 
-// Task 7: Closures 
+// Task 7: Closures
 
-// watch yt video on this
+const createBudgetTracker = () => {
+    let balance = 0; // Initialize balance
+
+   return function1 = (expense) => {
+            return balance -= expense;
+   };
+    };
+
+let budget = createBudgetTracker();
+
+console.log(`Current Balance: $${budget(300)}`); // Expected output: "Current Balance: -$300"
+console.log(`Current Balance: $${budget(200)}`); // Expected output: "Current Balance: -$500"
+
+// Note: appears as $-300. oops
