@@ -64,3 +64,9 @@ const calculateShippingCost = (weight, location, expedited = false) => {
 }
 console.log(`Shipping Cost: $${calculateShippingCost(10, "USA", true).toFixed(2)}`); // Expected output: "Shipping Cost: $20.00"
 console.log(`Shipping Cost: $${calculateShippingCost(5, "Canada", false).toFixed(2)}`); // Expected output: "Shipping Cost: $13.50"
+
+// Task 5: Returning Values
+
+const calculateLoanInterest = (principal, rate, years) => principal * rate * years; // Simple arrow function
+console.log(`Total Interest: $${calculateLoanInterest(1000, 0.05, 3).toFixed(2)}`); // Expected output: "Total Interest: $150.00"
+console.log(`Total Interest: $${calculateLoanInterest(5000, 0.07, 5).toFixed(2)}`); // Expected output: "Total Interest: $1750.00"
