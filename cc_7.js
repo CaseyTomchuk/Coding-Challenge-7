@@ -79,3 +79,7 @@ const filterHighValueTransactions = (transactions, amount) => transactions.filte
 
 console.log(filterHighValueTransactions(transactions, amount => amount > 1000)); // Expected output: [1200, 3000, 2200]
 // The log is where we decide what amount we want to filter by
+
+// Task 7: Closures 
+
+// watch yt video on this
