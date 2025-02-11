@@ -70,3 +70,12 @@ console.log(`Shipping Cost: $${calculateShippingCost(5, "Canada", false).toFixed
 const calculateLoanInterest = (principal, rate, years) => principal * rate * years; // Simple arrow function
 console.log(`Total Interest: $${calculateLoanInterest(1000, 0.05, 3).toFixed(2)}`); // Expected output: "Total Interest: $150.00"
 console.log(`Total Interest: $${calculateLoanInterest(5000, 0.07, 5).toFixed(2)}`); // Expected output: "Total Interest: $1750.00"
+
+// Task 6: Higher-Order Functions
+
+let transactions = [500, 1200, 3000, 800, 2200];
+const filterHighValueTransactions = (transactions, amount) => transactions.filter(amount); 
+// This arrow function takes in the transactions array and allows for us to apply the filtering function for each individual transaction
+
+console.log(filterHighValueTransactions(transactions, amount => amount > 1000)); // Expected output: [1200, 3000, 2200]
+// The log is where we decide what amount we want to filter by
