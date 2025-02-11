@@ -12,3 +12,27 @@ console.log(`Hourly Wage: $${calculateHourlyWage(75000, 35).toFixed(2)}`); // Ex
 
 // Added .toFixed(2) to both Task 1 and Task 2 to prevent match the expected output better and to prevent 41.41 from looking like 41.207892395
 // This just limits (or extends) the output to 2 decimal points
+
+// Task 3: Arrow Function
+
+const calculateLoyaltyDiscount = (amount, years) => {
+    let discount = 0 // Initializing the discount variable
+
+    // Creating an if statement to determine what the discount should be based on the number of years 
+
+    if (years >= 5) { 
+        discount = 0.15;
+    }
+    else if (years >= 3) {
+        discount = 0.10;
+    }   
+    else {
+        discount = 0.05;
+    }
+
+    const newPrice = amount * (1 - discount); // Creating a new variable that applies the relevant discount to the entered amount
+    return (newPrice) // That output that is returned when the function is called 
+};
+
+console.log(`Discounted Price: $${calculateLoyaltyDiscount(100, 6).toFixed(2)}`) //  Expected output: "Discounted Price: $85.00"
+console.log(`Discounted Price: $${calculateLoyaltyDiscount(200, 2).toFixed(2)}`); // Expected output: "Discounted Price: $190.00"
