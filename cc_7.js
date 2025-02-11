@@ -96,3 +96,13 @@ console.log(`Current Balance: $${budget(300)}`); // Expected output: "Current Ba
 console.log(`Current Balance: $${budget(200)}`); // Expected output: "Current Balance: -$500"
 
 // Note: appears as $-300. oops
+
+// Task 8: Recursion in Javascript 
+
+calculateGrowth = (years, revenue) => {
+    if (years < 10) return calculateGrowth(years + 1, revenue * 1.05); // if less than 10 years, we are increasing the year count and adding the growth
+    else return revenue; // once we are at 10 years, we can display the revenue
+}
+
+console.log(`Projected Revenue: $${calculateGrowth(8, 1000).toFixed(2)}`); // Expected output: "Projected Revenue: $1102.50"
+console.log(`Projected Revenue: $${calculateGrowth(5, 5000).toFixed(2)}`); // Expected output: "Projected Revenue: $6381.41"
