@@ -36,3 +36,31 @@ const calculateLoyaltyDiscount = (amount, years) => {
 
 console.log(`Discounted Price: $${calculateLoyaltyDiscount(100, 6).toFixed(2)}`) //  Expected output: "Discounted Price: $85.00"
 console.log(`Discounted Price: $${calculateLoyaltyDiscount(200, 2).toFixed(2)}`); // Expected output: "Discounted Price: $190.00"
+
+// Task 4: Parameters and Arguments
+
+const calculateShippingCost = (weight, location, expedited = false) => {
+   let bonusCost = 0; // Initializing the additional cost per pound
+   let total = 0; // Initializing a total variable that I will use to add costs on to
+  
+   // Created an if function to set different parameters based on the country. It starts by adding the base fees ($5 or $10) to the total,
+   // it then multiplies the weight by the cost per pound. At the end of the function I add the total to the bonus cost calculated.
+
+    if (location === "USA") {
+        total += 5 // This is the base cost for the shipping fees
+        bonusCost = 0.5 * weight;
+    }
+    else if (location === "Canada") {
+        total += 10 // This is the base cost for the shipping fees
+        bonusCost = 0.7 * weight;
+    }
+
+    if (expedited === true) {
+        total += 10;
+    }
+
+    total += bonusCost
+    return(total);
+}
+console.log(`Shipping Cost: $${calculateShippingCost(10, "USA", true).toFixed(2)}`); // Expected output: "Shipping Cost: $20.00"
+console.log(`Shipping Cost: $${calculateShippingCost(5, "Canada", false).toFixed(2)}`); // Expected output: "Shipping Cost: $13.50"
